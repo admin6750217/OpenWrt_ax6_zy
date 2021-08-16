@@ -13,9 +13,6 @@
 # Modify default IP
 sed -i 's/192.168.1.1/192.168.11.1/g' package/base-files/files/bin/config_generate
 
-# 修改连接数
-sed -i 's/net.netfilter.nf_conntrack_max=.*/net.netfilter.nf_conntrack_max=65535/g' package/kernel/linux/files/sysctl-nf-conntrack.conf
-
 # themes添加（svn co 命令意思：指定版本如https://github）
 git clone https://github.com/Leo-Jo-My/luci-theme-Butterfly package/luci-theme-Butterfly
 git clone https://github.com/Leo-Jo-My/luci-theme-Butterfly-dark package/luci-theme-Butterfly-dark
@@ -30,6 +27,8 @@ git clone https://github.com/sirpdboy/luci-theme-opentopd package/luci-theme-ope
 #svn co https://github.com/rosywrt/luci-theme-rosy/trunk/luci-theme-rosy package/luci-theme-rosy
 #svn co https://github.com/rosywrt/luci-theme-purple/trunk/luci-theme-purple package/luci-theme-purple
 
+git clone https://github.com/jerrykuku/lua-maxminddb.git package/lua-maxminddb
+git clone https://github.com/jerrykuku/luci-app-vssr.git package/luci-app-vssr
 
 # Modify hostname
 #sed -i 's/OpenWrt/OpenWrt/g' package/base-files/files/bin/config_generate
