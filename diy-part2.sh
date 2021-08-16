@@ -14,6 +14,7 @@
 sed -i 's/192.168.1.1/192.168.11.1/g' package/base-files/files/bin/config_generate
 
 sed -i '/customized in this file/a net.netfilter.nf_conntrack_max=165535' package/base-files/files/etc/sysctl.conf
+
 # themes添加（svn co 命令意思：指定版本如https://github）
 git clone https://github.com/Leo-Jo-My/luci-theme-Butterfly package/luci-theme-Butterfly
 git clone https://github.com/Leo-Jo-My/luci-theme-Butterfly-dark package/luci-theme-Butterfly-dark
@@ -38,7 +39,7 @@ git clone https://github.com/jerrykuku/luci-app-vssr.git package/luci-app-vssr
 #sed -i "s/OpenWrt /MuaChow build $(TZ=UTC-8 date "+%Y.%m.%d") @ OpenWrt /g" package/lean/default-settings/files/zzz-default-settings
 
 #添加额外非必须软件包
-#git clone https://github.com/kongfl888/luci-app-adguardhome.git package/luci-app-adguardhome
+git clone https://github.com/rufengsuixing/luci-app-adguardhome.git package/luci-app-adguardhome
 #git clone https://github.com/garypang13/luci-app-bypass package/luci-app-bypass
 git clone https://github.com/vernesong/OpenClash.git package/OpenClash
 
